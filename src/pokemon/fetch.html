@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <style>
+      .card {
+        margin-top: 50px;
+        border: 1px solid pink;
+        background-color: #2f2e2e;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .name {
+        color: red;
+        font-weight: bold;
+      }
+      .text {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="../index.html">Main page</a></p>
+    <form class="js-form">
+      <input
+        type="number"
+        name="query"
+        placeholder="enter random number"
+        min="1"
+      />
+      <button type="submit">Search</button>
+    </form>
+    <div class="container"></div>
+
+    <script type="module" src="./fetch.js"></script>
+  </body>
+</html>
