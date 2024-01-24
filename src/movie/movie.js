@@ -10,7 +10,6 @@ const ENDPOINT = "/trending/movie/week"
 const API_KEY = "d23ee7111563012a1c81428dff1d7a5f"
 
 // btnLoad.addEventListener('click', onLoadMoreClick)
-
 // fetchMovie(page=1)
 //     .then(data => {
 //         console.log(data)
@@ -50,7 +49,7 @@ function fetchMovieInfo(movieId) {
     return fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`)
         .then(result => {
             if (!result.ok) {
-            throw new Error(result.statusText)
+                throw new Error(result.statusText)
             }
             return result.json()
         })
@@ -59,10 +58,10 @@ function fetchMovieInfo(movieId) {
 function createMarkup(arr) {
     return arr.map(({ id, title, vote_average, poster_path }) =>
         `<li id="${id}" class="item">
-        <img src="https://image.tmdb.org/t/p/w200${poster_path}">
-        <h2>${title}</h2>
-        <p class="vote">${vote_average.toFixed(1)}</p>
-        <button class="more-btn">Read more...</button>
+            <img src="https://image.tmdb.org/t/p/w200${poster_path}">
+            <h2>${title}</h2>
+            <p class="vote">${vote_average.toFixed(1)}</p>
+            <button class="more-btn">Read more...</button>
         </li>`).join('')
 }
 
@@ -77,7 +76,6 @@ function onReadMoreClick(event) {
     const selectedMovie = event.target.closest('.item')
     fetchMovieInfo(+selectedMovie.id)
         .then(res =>  {
-            console.log(res)
             instance = basicLightbox.create(`<div class="modal-box">
                 <img src="https://image.tmdb.org/t/p/w200${res.poster_path}">
                 <h2>${res.title}</h2>

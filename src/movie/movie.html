@@ -22,10 +22,15 @@
         background-color: #897e7e3f;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+      }
+
+      h2{
+        text-align: center;
+        margin: 0;
       }
       .more-btn {
         padding: 10px;
-        background-color: #ffffffa8;
         cursor: pointer;
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
       }
@@ -60,17 +65,14 @@
         color: aliceblue;
         padding: 20px;
         width: 50%;
+        margin-left: auto;
+        margin-right: auto;
       }
     </style>
   </head>
   <body>
     <p><a href="../index.html">Main page</a></p>
-
     <ul class="list"></ul>
-    <!-- <div class="btn-container">
-      <button class="js-load-more">Load more</button>
-    </div> -->
-
     <div class="guard"></div>
     <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
 
